@@ -6,13 +6,10 @@ This program draws a simple house
 */
 
 public class Sketch extends PApplet {
-  	//declare width and height variables (800 width 600 height)
-  int intWidth = 800;
-  int intHeight = 600;
 
   public void settings() {
     //set screen size
-    size(intWidth, intHeight);
+    size(800, 600);
   }
 
   public void setup() {
@@ -23,67 +20,67 @@ public class Sketch extends PApplet {
   public void draw() {
     //house base
     fill(255,255,204);
-    rect(intWidth/4, intHeight/2, intWidth/2, intHeight/2);
-    triangle(intWidth/4, intHeight/2, intWidth/2, intHeight/3, intWidth/4*3, intHeight/2);
+    rect(width / 4, height / 2, width / 2, height / 2);
+    triangle(width / 4, height / 2, width / 2, height / 3, width / 4 * 3, height / 2);
     
     //grass
     fill(51, 204, 51);
-    rect(0, intHeight*58/60, intWidth, intHeight/30);
+    rect(0, height * 58 / 60, width, height / 30);
     
     //door
     fill(255, 204, 102);
-    rect(intWidth*36/80, intHeight*45/60, intWidth/10, intHeight*13/60);
+    rect(width * 36 / 80, height * 45 / 60, width / 10, height * 13 / 60);
 
     //windows
     fill (51, 204, 255);
-    rect(intWidth*25/80, intHeight*35/60, intWidth/16, intHeight/12);
-    rect(intWidth*5/8, intHeight*35/60, intWidth/16, intHeight/12);
+    rect(width * 25 / 80, height * 35 / 60, width / 16, height / 12);
+    rect(width * 5 / 8, height * 35 / 60, width / 16, height / 12);
     
     //yellow (sun and doorknob)
     fill(255, 255, 0);
-    ellipse(intWidth/8, intHeight/6, intWidth/8, intHeight/6);
-    ellipse(intWidth*42/80, intHeight*52/60, intWidth/80, intHeight/60);
+    ellipse(width / 8, height / 6, width / 8, height / 6);
+    ellipse(width * 42 / 80, height * 52 / 60, width / 80, height / 60);
     
     //window lines
-    line(intWidth*275/800, intHeight*35/60, intWidth*275/800, intHeight*2/3);
-    line(intWidth*25/80, intHeight*375/600, intWidth*3/8, intHeight*375/600);
-    line(intWidth*525/800, intHeight*35/60, intWidth*525/800, intHeight*2/3);
-    line(intWidth*5/8, intHeight*375/600, intWidth*55/80, intHeight*375/600);
+    line(width * 275 / 800, height * 35 / 60, width * 275 / 800, height * 2 / 3);
+    line(width * 25 / 80, height * 375 / 600, width * 3 / 8, height * 375 / 600);
+    line(width * 525 / 800, height * 35 / 60, width * 525 / 800, height * 2 / 3);
+    line(width * 5 / 8, height * 375 / 600, width * 55 / 80, height * 375 / 600);
 
     //flower stems
     stroke(51, 153, 51);
-    strokeWeight(intWidth/200);
-    line(intWidth*25/80, intHeight*58/60, intWidth*25/80, intHeight*52/60);
-    line(intWidth*325/800, intHeight*58/60, intWidth*325/800, intHeight*52/60);
-    line(intWidth*475/800, intHeight*58/60, intWidth*475/800, intHeight*52/60);
-    line(intWidth*55/80, intHeight*58/60, intWidth*55/80, intHeight*52/60);
+    strokeWeight(width / 200);
+    line(width * 25 / 80, height * 58 / 60, width * 25 / 80, height * 52 / 60);
+    line(width * 325 / 800, height * 58 / 60, width * 325 / 800, height * 52 / 60);
+    line(width * 475 / 800, height * 58 / 60, width * 475 / 800, height * 52 / 60);
+    line(width * 55 / 80, height * 58 / 60, width * 55 / 80, height * 52 / 60);
     
-    //flowers
+     //flowers
     stroke(0);
     strokeWeight(0);
 
     fill(255, 153, 0);
-    ellipse(intWidth*25/80, intHeight*52/60, intWidth/16, intHeight/30);
-    ellipse(intWidth*25/80, intHeight*52/60, intWidth/40, intHeight/12);
+    ellipse(width * 25 / 80, height * 52 / 60, width / 16, height / 30);
+    ellipse(width * 25 / 80, height * 52 / 60, width / 40, height / 12);
     
-    ellipse(intWidth*55/80, intHeight*52/60, intWidth/16, intHeight/30);
-    ellipse(intWidth*55/80, intHeight*52/60, intWidth/40, intHeight/12);
+    ellipse(width * 55 / 80, height * 52 / 60, width / 16, height / 30);
+    ellipse(width * 55 / 80, height * 52 / 60, width / 40, height / 12);
 
     fill(255, 102, 255);
-    ellipse(intWidth*325/800, intHeight*52/60, intWidth/16, intHeight/30);
-    ellipse(intWidth*325/800, intHeight*52/60, intWidth/40, intHeight/12);
+    ellipse(width * 325 / 800, height * 52 / 60, width / 16, height / 30);
+    ellipse(width * 325 / 800, height * 52 / 60, width / 40, height / 12);
 
-    ellipse(intWidth*475/800, intHeight*52/60, intWidth/16, intHeight/30);
-    ellipse(intWidth*475/800, intHeight*52/60, intWidth/40, intHeight/12);
+    ellipse(width * 475 / 800, height * 52 / 60, width / 16, height / 30);
+    ellipse(width * 475 / 800, height * 52 / 60, width / 40, height / 12);
 
 
     //flower centers
     strokeWeight(1);
     fill(255, 255, 0);
-    ellipse(intWidth*25/80, intHeight*52/60, intWidth/40, intHeight/30);
-    ellipse(intWidth*325/800, intHeight*52/60, intWidth/40, intHeight/30);
-    ellipse(intWidth*475/800, intHeight*52/60, intWidth/40, intHeight/30);
-    ellipse(intWidth*55/80, intHeight*52/60, intWidth/40, intHeight/30);
+    ellipse(width * 25 / 80, height * 52 / 60, width / 40, height / 30);
+    ellipse(width * 325 / 800, height * 52 / 60, width / 40, height / 30);
+    ellipse(width * 475 / 800, height * 52 / 60, width / 40, height / 30);
+    ellipse(width * 55 / 80, height * 52 / 60, width / 40, height / 30);
 
   }
   
